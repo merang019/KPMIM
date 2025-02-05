@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <header>WELCOME TO KPMIM REGISTRATION</header>
+
+        {% with firstname="Muhammad Imran" secondname="Fatisah"%} 
+            <h1>Hello {{ firstname }}, how  are you?</h1>
+            <h1>My mother name is {{ secondname }}</h1>
+            <h1>My father name is {{ fathername }}</h1>
+        {% endwith %}
+
+        {% if greeting == 1 %}
+
+              <h1>HELLO</h1>
+              
+        {% endif %}
+
+        <a href="{% url 'course' %}")>
+            <button>INSERT COURSE</button> 
+        </a>
+        <a href="{% url 'mentor' %}")>
+            <button>INSERT MENTOR</button>
+        </a>
+
+        <a href="{% url 'search_course' %}")>
+            <button>SEARCH COURSE</button>
+        </a>
+
+        <a href="{% url 'search_mentor' %}")>
+            <button>SEARCH MENTOR</button>
+        </a>
+
+    </center>
+</body>
+</html>

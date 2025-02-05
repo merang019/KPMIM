@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Kolej Profesional MARA Indera Mahkota</h1>
+    <h2>COURSE</h2>
+    <form action ="" method="post">
+        {%csrf_token %}
+        MENTOR Code <input type="text" name="mentorCd"><br><br>
+        MENTOR Name <input type="text" name="mentorName"><br><br>
+        MENTOR Email <input type="text" name="mentorEmail"><br><br>
+        <input type="submit" value="SAVE"><br><br>
+
+    </form>
+    {{message}}
+<br><br>
+    <table border="1">
+        <th>mentorCd</th><th>mentorName</th><th>mentorEmail</th>
+
+    {% for x in allmentor %}
+    <tr>
+    <td>{{ x.mentorCd }}</td>
+    <td>{{ x.mentorName }}</td>
+    <td>{{ x.mentorEmail }}</td>
+
+
+    </tr>
+    {% endfor %}
+    </table>
+        <a href="{% url 'index' %}">
+            <button>HOMEPAGE</button>
+         </a>
+         <a href="{% url 'course' %}">
+            <button>INSERT COURSE</button> 
+        </a>
+    </from>
+   
+</body>
+</html>
